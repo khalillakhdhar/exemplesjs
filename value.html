@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>data</title>
+    <script>
+        function hello()
+        {
+            var x=document.getElementById("myname");
+            var y=document.getElementById("myfname");
+var message= "bonjour "+x.value+" "+y.value;
+alert(message);
+        }
+    </script>
+</head>
+<body>
+    <form method="post">
+Votre nom ici:<input type="text" name="nom" id="myname">
+Votre prénom ici:<input type="text" name="prenom" id="myfname">
+<input type="button"  onclick="hello()" value="tester">
+    </form>
+</body>
+</html>
