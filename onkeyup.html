@@ -1,0 +1,17 @@
+<html>
+<body>
+
+<p>Mettre en majuscule</p>
+Votre nom: <input type="text" id="fname" onkeyup="myFunction()">
+<div id="key"></div>
+<script>
+function myFunction() {
+  var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+  var y=document.getElementById("key");
+  y.innerHTML=x.value;
+}
+</script>
+
+</body>
+</html>
