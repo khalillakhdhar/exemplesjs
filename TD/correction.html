@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex1</title>
+</head>
+<body>
+    <form>
+    Nom:<input type="text" name="nom" id="myname">
+    Salaire Brute:<input type="number" min="800" name="salaire" id="sb">
+
+    <p id="nette"></p>
+    <input disabled id="innette">
+<input type="button" onclick="paiement()" value="Calculer">
+</form>
+    <script>
+function paiement()
+{
+var n=document.getElementById("myname");
+var s=document.getElementById("sb");
+var nom=n.value;
+var salaire=s.value;
+let sn=salaire*0.81;
+var x=document.getElementById("nette");
+var y=document.getElementById("innette");
+x.innerHTML="la salaire nette de "+nom+" est de <strong> "+sn+"<strong>";
+y.value="la salaire nette de "+nom+" est de <strong> "+sn+"<strong>";
+
+
+}
+
+    </script>
+</body>
+</html>
