@@ -5,24 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Correction HTML</title>
+    <style>
+table
+{
+    margin-right: 30%;
+    margin-left: 30%;
+    width: 40%;
+
+
+}
+td{
+width: 50%;
+text-align: right;
+}
+h1
+{
+    color:#0000ff;
+}
+.frm
+{
+    height: 30px;
+    width: 100%;
+    border-radius: 6px;
+    background-color: #fff;
+    margin-top: 8px;
+}
+.centered
+{
+    text-align: center;
+}
+.titlebar
+{
+    margin-bottom: 20px;
+}
+
+    </style>
 </head>
 <body>
     <form>
-   <table>
-       <tr><td colspan="2"><h1>Demande de stage</h1></td></tr>
-       <tr><td>Nom</td><td><input name="n" type="text" required></td>   </tr>
-       <tr><td>Prenom</td><td><input name="prenom" type="text" required></td>   </tr>
-       <tr><td>Adresse</td><td><textarea required></textarea></td>   </tr>
-       <tr><td>Code postale</td><td><input name="c" type="text" required></td>   </tr>
-       <tr><td>Date de naissance</td><td><input name="d" type="date" required></td>   </tr>
-       <tr><td>Bac+</td><td><input name="b" type="number" value="0" max="12" required></td>   </tr>
+   <table cellpadding="3">
+       <tr><td colspan="2" ><h1 class="titlebar">Demande de stage</h1></td></tr>
+       <tr><td>Nom</td><td><input name="n" pattern="[A-Za-z ']{3,}" type="text" required class="frm"></td>   </tr>
+       <tr><td>Prenom</td><td><input name="prenom"  pattern="[A-Za-z ']{3,}" type="text" required class="frm"></td>   </tr>
+       <tr><td>Adresse</td><td><textarea  class="frm"></textarea></td>   </tr>
+       <tr><td>Code postale</td><td><input name="c" pattern="[0-9]{4}" type="text" required class="frm"></td>   </tr>
+       <tr><td>Date de naissance</td><td><input name="d" type="date" required class="frm"></td>   </tr>
+       <tr><td>Bac+</td><td><input name="b" type="number" value="0" max="12" required class="frm"></td>   </tr>
        <tr><td>Redoublement</td><td><input name="r" type="radio">OUI<br><input name="r" type="radio">Non</td>   </tr>
-       <tr><td>Email</td><td><input name="email" type="email" required></td>   </tr>
-       <tr><td>Mot de passe</td><td><input name="mdp" type="password" required></td>   </tr>
-       <tr><td>LinkedIn</td><td><input name="linkedin" type="url" required></td>   </tr>
+       <tr><td>Email</td><td><input name="email" type="email" required class="frm"></td>   </tr>
+       <tr><td>Mot de passe</td><td><input name="mdp" type="password" required class="frm"></td>   </tr>
+       <tr><td>LinkedIn</td><td><input name="linkedin" class="frm" type="url" ></td>   </tr>
        <tr><td>Type de stage</td><td><input name="ts"  type="checkbox" >Pré-embauche<input name="ts"  type="checkbox" >Ouvrier<input name="ts"  type="checkbox" >P.F.E</td>   </tr>
        
-       <tr><td colspan="2"><button type="submit">Envoyer demande</button></td></tr>
+       <tr><td colspan="2" class="centered"><button type="submit">Envoyer demande</button></td></tr>
 
    </table> </form>
 </body>
