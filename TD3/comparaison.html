@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correction</title>
+</head>
+<body>
+    donnez un entier a:<input id="elementa" type="text">
+    donnez un entier b:<input type="text" id="elementb" type="text">
+    <button onclick="comparaison()">comparer</button>
+</body>
+<script>
+function comparaison()
+{
+var a=document.getElementById("elementa").value;
+a=parseFloat(a);
+var b=document.getElementById("elementb").value;
+b=parseFloat(b);
+if(a>b)
+alert("l'entier"+a+" est > "+b);
+else if(a==b)
+{
+    alert("l 'entier "+a+" est = "+b);    
+}
+else
+alert("l'entier"+a+" est < "+b)
+
+}
+
+
+</script>
+</html>

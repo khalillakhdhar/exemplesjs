@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If</title>
+</head>
+<body>
+    <p>Veuillez saisir votre age<input name="age" type="number" min="1" id="ag">
+        <button onclick="evaluation()" type="button">Evaluer</button>
+
+    </p>
+</body>
+<script>
+    function evaluation()
+    {
+
+        var age=document.getElementById("ag").value;
+        /*
+        ---if -else ---
+        if(age>=18)
+        alert("majeur");
+        else
+        alert("mineur!");
+        */
+        if(age<12)
+        alert("enfant!");
+        else if(age<18)
+        alert("adolescent");
+        else if(age<70)
+        alert("majeur");
+        else
+        alert("séniore");
+    }
+</script>
+</html>

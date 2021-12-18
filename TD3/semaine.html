@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #affiche{
+            color: #343ec5cc;
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>semaine</title>
+</head>
+<body>
+    veuillez saisir le numéro du jour:<input type="number" name="jour" id="jr" min="1" max="7">
+
+    <button onclick="validation()">Valider le jour</button><br>
+    <p id="affiche"></p>
+</body>
+
+
+<script>
+function validation()
+{
+var j=document.getElementById("jr").value;
+console.log("type:",typeof(j));
+
+j=parseInt(j);
+
+console.log("jour:",j);
+console.log("type:",typeof(j));
+var affichage=document.getElementById("affiche");
+switch(j)
+{
+    case 1: affichage.innerHTML="lundi";
+    break;
+    case 2: affichage.innerHTML="mardi";
+    break;
+    case 3: affichage.innerHTML="mercredi";
+    break;
+    case 4: affichage.innerHTML="jeudi";
+    break;
+    case 5: affichage.innerHTML="vendredi";
+    break;
+    case 6: affichage.innerHTML="sameddi";
+    break;
+    case 7: affichage.innerHTML="dimanche";
+    break;
+}
+
+}
+
+
+</script>
+</html>
